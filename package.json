@@ -1,0 +1,29 @@
+{
+  "name": "swagger-hapi",
+  "version": "0.0.1",
+  "description": "Swagger loader and middleware for Hapi",
+  "keywords": [
+    "swagger",
+    "api",
+    "apis",
+    "hapi"
+  ],
+  "author": "Scott Ganyo <sganyo@apigee.com>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apigee-127/swagger-hapi.git"
+  },
+  "dependencies": {
+    "swagger-node-runner": "^0.4.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.1",
+    "should": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha -u exports -R spec test test/lib",
+    "coverage": "istanbul cover _mocha -- -u exports -R spec test test/lib"
+  }
+}
