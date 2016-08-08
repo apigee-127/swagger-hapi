@@ -55,14 +55,6 @@ describe('hapi_middleware', function() {
 
   describe('basics', function() {
 
-    it('should expose config', function() {
-
-      hapiMiddleware.sysConfig.should.be.an.Object;
-      _.each(DEFAULT_PROJECT_CONFIG, function(value, key) {
-        hapiMiddleware.sysConfig[key].should.eql(value);
-      });
-    });
-
     it('should expose runner', function() {
 
       hapiMiddleware.runner.should.equal(createdRunner);
@@ -74,11 +66,6 @@ describe('hapi_middleware', function() {
       hapiMiddleware.plugin.register.should.be.a.Function;
       hapiMiddleware.plugin.register.attributes.should.have.keys('name', 'version');
     });
-
-    it('should set config to config.swagger', function() {
-
-      hapiMiddleware.sysConfig.should.eql(hapiMiddleware.runner.config.swagger);
-    })
   });
 
   describe('register', function() {
